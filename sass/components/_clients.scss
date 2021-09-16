@@ -10,21 +10,19 @@
   padding: 16px 32px;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+  }
+  &:hover .clients-list__icon,
+  &:focus .clients-list__icon {
+    fill: var(--accent-color);
+  }
 }
 
 .clients-list__icon {
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
-}
-
-.clients-list__link:hover,
-.clients-list__link:focus {
-  border: 1px solid var(--accent-color);
-}
-
-.clients-list__link:hover .clients-list__icon,
-.clients-list__link:focus .clients-list__icon {
-  fill: var(--accent-color);
 }
 
 .clients-list {

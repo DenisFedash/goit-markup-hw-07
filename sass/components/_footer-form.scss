@@ -58,24 +58,23 @@
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
   transition: 250ms var(--cubic-bezier);
-}
-
-.subscribe__input:focus-within {
-  outline: transparent;
-  border-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: var(--cubic-bezier);
+  &:focus-within {
+    outline: transparent;
+    border-color: var(--accent-color);
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic-bezier);
+  }
 }
 
 .form-button--subscribe {
   padding: 0;
-}
-.form-button--subscribe::after {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url(../images/svg-images/icon-send.svg);
-  vertical-align: middle;
-  margin-left: 10px;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/svg-images/icon-send.svg);
+    vertical-align: middle;
+    margin-left: 10px;
+  }
 }

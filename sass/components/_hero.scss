@@ -51,9 +51,9 @@
 
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
-}
 
-.hero__button:hover,
-.hero__button:focus {
-  background-color: #188ce8;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }

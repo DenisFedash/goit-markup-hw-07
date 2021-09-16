@@ -7,6 +7,14 @@
   height: 100%;
   opacity: 1;
   transition: 250ms var(--cubic-bezier);
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .modal {
@@ -18,16 +26,6 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: 250ms var(--cubic-bezier);
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-}
-
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .modal {
@@ -47,11 +45,10 @@
   align-items: center;
   cursor: pointer;
   transition: 250ms var(--cubic-bezier);
-}
-
-.modal__close:hover,
-.modal__close:focus {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .form-field {
@@ -90,15 +87,13 @@
   box-sizing: border-box;
   border-radius: 4px;
   transition: 250ms var(--cubic-bezier);
-}
-
-.form-field__input:focus-within {
-  outline: transparent;
-  border-color: var(--accent-color);
-}
-
-.form-field__input:focus-within + .modal-icon {
-  fill: var(--accent-color);
+  &:focus-within {
+    outline: transparent;
+    border-color: var(--accent-color);
+  }
+  &:focus-within + .modal-icon {
+    fill: var(--accent-color);
+  }
 }
 
 .form-field__icon {
@@ -112,12 +107,11 @@
   margin-bottom: 20px;
   transition: 250ms var(--cubic-bezier);
   resize: none;
-}
-
-.form-field__textarea:focus-within {
-  border-color: transparent;
-  outline: transparent;
-  border-color: var(--accent-color);
+  &:focus-within {
+    border-color: transparent;
+    outline: transparent;
+    border-color: var(--accent-color);
+  }
 }
 
 .icon__text {
@@ -146,13 +140,15 @@
   transition: 250ms var(--cubic-bezier);
 }
 
-.label__checkbox:checked + .icon {
-  border: transparent;
-  background-origin: border-box;
-  border-color: transparent;
-  background-color: var(--accent-color);
+.label__checkbox {
+  &:checked + .icon {
+    border: transparent;
+    background-origin: border-box;
+    border-color: transparent;
+    background-color: var(--accent-color);
 
-  fill: #ffffff;
+    fill: #ffffff;
+  }
 }
 
 .check {

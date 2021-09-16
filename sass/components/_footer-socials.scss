@@ -2,10 +2,9 @@
   width: 44px;
   height: 44px;
   margin-right: 10px;
-}
-
-.social-list__item:last-child {
-  margin-right: 0;
+  \ &:last-child {
+    margin-right: 0;
+  }
 }
 
 .footer-socials {
@@ -38,9 +37,8 @@
   fill: rgba(255, 255, 255, 1);
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
-}
-
-.social-list__link:hover,
-.social-list__link:focus {
-  background-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
